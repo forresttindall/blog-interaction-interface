@@ -3,6 +3,9 @@
 # Blog Article User Interaction Interface
 ==============================================
 
+##[See It Live](https://www.forresttindall.com/solutionarticle.html)
+
+
 ![bloginterface3](https://github.com/user-attachments/assets/505cbbc6-139a-47ca-b34a-d332e304bcb6)
 
 
