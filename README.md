@@ -38,7 +38,7 @@
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone [ttps://github.com/forresttindall/blog-interaction-interface.git](https://github.com/forresttindall/blog-interaction-interface.git)
 ```
 
 ### Setup
