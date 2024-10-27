@@ -16,7 +16,8 @@
 *   **Firebase Integration**: Seamlessly integrates with Firebase for real-time data storage and retrieval.
 
 
-![bloginterface4](https://github.com/user-attachments/assets/34d32d8a-59de-4044-b796-1ce0ee12d196)
+![bloginterface5](https://github.com/user-attachments/assets/10292db2-6f79-4f8c-bda4-0c5b2c3d3803)
+
 
 
 ## Technologies Used
