@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+<link rel="stylesheet" href="./style.css"/>
+
+<script src="module.js" type="module"></script>
+
+</head>
+
+
+<body>
+
+
+    <article>
+        <h1 class="articletitle ">The Solution Looking for a Problem: A Tech Industry Paradox</h1>
+        
+        <div class="meta">
+            Published: October 27, 2024 • 8 min read
+        </div>
+    </header>
+
+    
+        <p>
+            As a software and hardware engineer deeply embedded in the tech ecosystem, 
+            I've observed a fascinating trend: the rise of startups solving problems 
+            that most people didn't know they had. It's a phenomenon that challenges 
+            our traditional understanding of product-market fit, yet somehow manages 
+            to create entirely new markets.
+        </p>
+
+        <h2>The Art of Creating Demand</h2>
+        <p>
+            The tech industry has mastered something peculiar – the ability to convince 
+            users they need something they've lived without for decades. Take Arc Browser, 
+            for instance. We've had web browsers since the dawn of the internet, and 
+            Chrome has dominated the space for years. Did we need another browser? 
+            Arc's creators at The Browser Company boldly claimed we did.
+        </p>
+
+        <h2>The "Build It and They Might Come" Philosophy</h2>
+        <p>
+            This approach flies in the face of traditional startup wisdom. We're often told to:
+        </p>
+        <ul>
+            <li>Identify a clear market need</li>
+            <li>Validate the problem</li>
+            <li>Build a solution</li>
+            <li>Scale</li>
+        </ul>
+
+        <h3>Notion</h3>
+        <p>
+            Did anyone ask for a tool that's simultaneously a document editor, a database, 
+            a wiki, and a project management system? No. We had specialized tools for each. 
+            Yet Notion created a new category of workspace tools by merging these functionalities.
+        </p>
+
+        <h3>Nothing Phone</h3>
+        <p>
+            Carl Pei's Nothing didn't solve any pressing smartphone problems. Instead, 
+            it introduced a unique aesthetic and notification system that users didn't 
+            know they wanted. The Glyph interface wasn't addressing a pain point – it 
+            was creating a new way to interact with our devices.
+        </p>
+
+        <h2>Looking Forward</h2>
+        <p>
+            As an engineer, this trend fascinates me. It challenges our assumptions 
+            about product development and user needs. However, I believe the tech industry 
+            doesn't need to innovate for innovation's sake. Instead, it should focus on 
+            solving real problems that people face. Products should emerge from genuine 
+            needs rather than the desire to create the next shiny gadget. If the industry 
+            redirected its efforts towards addressing actual issues—rather than churning 
+            out a million browsers or phones with marginally better cameras—the world 
+            would undoubtedly be a better place. It's time to prioritize meaningful innovation 
+            that truly enhances our lives.
+        </p>
+    </div>
+    </article>
+
+
+    
+    <div class="interaction-bar">
+        <button class="interaction-button" id="likeButton">
+            <span class="icon">👍</span>
+            Like
+            <span class="counter" id="likeCounter">0</span>
+        </button>
+        
+        <button class="interaction-button" id="commentButton">
+            <span class="icon">💬</span>
+            Comment
+            <span class="counter" id="commentCounter">0</span>
+        </button>
+        
+        <button class="interaction-button" id="shareButton">
+            <span class="icon">📤</span>
+            Share
+        </button>
+    </div>
+
+    <div id="commentSection">
+        <textarea class="comment-input" placeholder="Write your comment here..."></textarea>
+        <button class="comment-submit">Post Comment</button>
+        <div class="comments-container"></div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="share-dialog" id="shareDialog">
+        <h3>Share this post</h3>
+        <button class="share-option" data-platform="threads">Threads</button> <!-- Updated to include Threads -->
+        <button class="share-option" data-platform="facebook">Facebook</button>
+        <button class="share-option" data-platform="linkedin">LinkedIn</button>
+        <button class="share-option" data-platform="copy">Copy Link</button>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    
+</body>
+</html>

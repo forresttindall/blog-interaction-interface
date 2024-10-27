@@ -1,0 +1,476 @@
+:root {
+    --primary-color: #2563eb;
+    --text-color: #909090;
+    --bg-color: rgb(10, 10, 10);
+    --secondary-bg: #f3f4f6;
+}
+
+body {
+    font-family:  "space grotesk", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    margin-top: 0px;  // Removed top margin to reduce spacing
+    padding-top: 0px;
+}
+
+.meta {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+
+.articletitle {
+    font-size: 2rem;
+    padding-top: 100px;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+article {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 0px;
+    
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.interaction-bar {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.interaction-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: var(--secondary-bg);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #4b5563;
+    transition: 0.7s ease all;
+}
+
+.interaction-button:hover {
+    background-color: #e5e7eb;
+}
+
+.interaction-button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.comment-section {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.comment-box {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    background-color: rgb(30, 30, 30);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+.comments-container {
+    margin-top: 2rem;
+}
+
+.comment {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-color: var(--secondary-bg);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.share-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(20, 20, 20);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: 0.7s ease all;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.share-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 4px;
+    background: rgb(20, 20, 20);
+    cursor: pointer;
+    transition: 0.7s ease all;
+}
+
+.share-button:hover {
+    background: var(--secondary-bg);
+}
+
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background: #4b5563;
+    color: white;
+    border-radius: 6px;
+    display: none;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    article {
+        padding: 1rem;
+    }
+
+    .interaction-button {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 0.8rem; /* Reduce font size for better fit */
+    }
+
+    .interaction-bar {
+        gap: 0.5rem; /* Reduce gap between buttons */
+    }
+
+    .interaction-bar {
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+        justify-content: space-between; /* Distribute space between buttons */
+    }
+
+    .interaction-button {
+        flex: 1 1 30%; /* Allow buttons to grow and shrink, with a base width of 30% */
+        margin: 0.5rem; /* Add margin for spacing */
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 0.8rem; /* Reduce font size for better fit */
+    }
+}
+
+
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .interaction-bar {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        border: 2px solid rgb(30, 30, 30);
+        border-radius: 8px;
+        background-color: rgba(20, 20, 20, 0.9);
+    }
+
+    .interaction-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid rgb(30, 30, 30);
+        border-radius: 6px;
+        background-color: rgba(30, 30, 30, 0.9);
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: #4b5563;
+        transition: 0.7s ease all;
+    }
+
+    .interaction-button:hover {
+        scale: 1.08;
+        color: white;
+        background: linear-gradient(to right, #3f74ff, #5e41d0);
+        box-shadow: 
+        0 0 10px rgba(63, 116, 255, 0.6),
+        0 0 20px rgba(123, 63, 255, 0.4),
+        0 0 30px rgba(63, 116, 255, 0.4);
+        border: none;
+        cursor: pointer;
+    }
+
+    .interaction-button.active {
+        color: white;
+        background: linear-gradient(to right, #3f74ff, #5e41d0);
+        box-shadow: 
+        0 0 10px rgba(63, 116, 255, 0.6),
+        0 0 20px rgba(123, 63, 255, 0.4),
+        0 0 30px rgba(63, 116, 255, 0.4);
+        border: none;
+        cursor: pointer;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .counter {
+        font-weight: 500;
+    }
+
+    /* Comment Section */
+    #commentSection {
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgb(30, 30, 30);
+        color: #909090;
+        border-radius: 8px;
+        background: rgb(20, 20, 20);
+        display: none;
+    }
+
+    .comment-input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid rgb(30, 30, 30);
+        color: #909090;
+        background-color: rgb(30, 30, 30);
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    .comment-submit {
+        padding: 0.5rem 1rem;
+        color: white;
+        background: linear-gradient(to right, #3f74ff, #5e41d0);
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .comment-submit:hover {
+        color: white;
+        background: linear-gradient(to right, #3f74ff, #5e41d0);
+        box-shadow: 
+        0 0 10px rgba(63, 116, 255, 0.6),
+        0 0 20px rgba(123, 63, 255, 0.4),
+        0 0 30px rgba(63, 116, 255, 0.4);
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Share Dialog */
+    .share-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(30, 30, 30);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        display: none;
+        z-index: 1000;
+    }
+
+    .share-dialog h3 {
+
+        margin-bottom: 1rem;
+    }
+
+    .share-option {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid rgb(50, 50, 50);
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        color: white;
+        background: linear-gradient(to right, #3f74ff, #5e41d0);
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        cursor: pointer;
+        cursor: pointer;
+        text-align: left;
+    
+    }
+
+    .share-option:hover {
+        scale: 1.08;
+        color: white;
+        background: linear-gradient(to right, #3f74ff, #5e41d0);
+        box-shadow: 
+        0 0 10px rgba(63, 116, 255, 0.6),
+        0 0 20px rgba(123, 63, 255, 0.4),
+        0 0 30px rgba(63, 116, 255, 0.4);
+        border: none;
+        cursor: pointer;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 999;
+    }
+
+    /* Toast */
+    .toast {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        padding: 1rem;
+        background: #4b5563;
+        color: white;
+        border-radius: 6px;
+        display: none;
+        animation: slideIn 0.3s ease-out;
+        padding-bottom: 100px;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Comments Container */
+    .comments-container {
+        margin-top: 1rem;
+    }
+
+    .comment {
+        padding: 0.75rem;
+        border: 1px solid rgb(50, 50, 50);
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+        background: rgb(40, 40, 40);
+        color: #909090;
+    }
+
+    .comment-meta {
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-bottom: 0.25rem;
+    }
